@@ -11,7 +11,7 @@ RUN export PHP_ACTIONS_VER="master" && \
     echo '@community http://nl.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories && \
 
     # Install common packages
-    apk add --no-cache \
+    apk add --update \
         git \
         nano \
         grep \
@@ -35,7 +35,7 @@ RUN export PHP_ACTIONS_VER="master" && \
     git checkout $PHP_ACTIONS_VER && \
     rsync -av rootfs/ / && \
 
-    # Install PHP specific packages
+    # Install specific packages
     apk add --update \
         mariadb-client \
         imap \
@@ -43,8 +43,8 @@ RUN export PHP_ACTIONS_VER="master" && \
         imagemagick \
         && \
 
-    # Install PHP extensions
-    apk add --no-cache \
+    # Install PHP packages
+    apk add --update \
         php7@community \
         php7-fpm@community \
         php7-opcache@community \
@@ -63,6 +63,7 @@ RUN export PHP_ACTIONS_VER="master" && \
         php7-zlib@community \
         php7-mcrypt@community \
         php7-mysqli@community \
+        php7-sqlite3@community \
         php7-bz2@community \
         php7-phar@community \
         php7-openssl@community \
@@ -77,8 +78,9 @@ RUN export PHP_ACTIONS_VER="master" && \
         php7-redis@testing \
         php7-mbstring@community \
         php7-xdebug@testing \
-#        php7-memcached@testing \
         php7-exif@community \
+        php7-xsl@community \
+        php7-ldap@community \
         && \
 
     # Create symlinks PHP -> PHP7
