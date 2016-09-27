@@ -81,6 +81,7 @@ RUN export PHP_ACTIONS_VER="master" && \
         php7-exif@community \
         php7-xsl@community \
         php7-ldap@community \
+        php7-bcmath@community \
         && \
 
     # Create symlinks PHP -> PHP7
