@@ -13,15 +13,11 @@ RUN export PHP_ACTIONS_VER="master" && \
 
     # Install common packages
     apk add --update \
-        libressl \
-        ca-certificates \
         openssh \
         git \
         nano \
         grep \
         sed \
-        curl \
-        wget \
         tar \
         gzip \
         pcre \
