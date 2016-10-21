@@ -17,9 +17,6 @@ RUN export PHP_ACTIONS_VER="master" && \
         git \
         nano \
         grep \
-        sed \
-        tar \
-        gzip \
         pcre \
         perl \
         patch \
