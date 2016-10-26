@@ -44,6 +44,7 @@ RUN export PHP_ACTIONS_VER="master" && \
         php7 \
         php7-fpm \
         php7-opcache \
+        php7-apcu \
         php7-session \
         php7-xml \
         php7-ctype \
