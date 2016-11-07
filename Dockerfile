@@ -1,7 +1,7 @@
 FROM wodby/nginx-alpine
 MAINTAINER Wodby <hello@wodby.com>
 
-RUN export PHP_ACTIONS_VER="master" && \
+RUN export PHP_ACTIONS_VER="665c2f630d093b0eca5714d938b30984cbb7ea84" && \
     export UPLOADPROGRESS_VER="0.1.0" && \
     export XDEBUG_VER="2.4.0" && \
     export WALTER_VER="1.3.0" && \
@@ -44,16 +44,16 @@ RUN export PHP_ACTIONS_VER="master" && \
         php7 \
         php7-fpm \
         php7-opcache \
-        php7-apcu \
         php7-session \
+        php7-dom \
         php7-xml \
+        php7-xmlreader \
         php7-ctype \
         php7-ftp \
         php7-gd \
         php7-json \
         php7-posix \
         php7-curl \
-        php7-dom \
         php7-pdo \
         php7-pdo_mysql \
         php7-sockets \
@@ -79,6 +79,7 @@ RUN export PHP_ACTIONS_VER="master" && \
         php7-xsl \
         php7-ldap \
         php7-bcmath \
+        php7-memcached \
         && \
 
     # Create symlinks PHP -> PHP7
