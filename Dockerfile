@@ -1,7 +1,7 @@
 FROM wodby/nginx-alpine
 MAINTAINER Wodby <hello@wodby.com>
 
-RUN export PHP_ACTIONS_VER="665c2f630d093b0eca5714d938b30984cbb7ea84" && \
+RUN export PHP_ACTIONS_VER="backward" && \
     export UPLOADPROGRESS_VER="0.1.0" && \
     export XDEBUG_VER="2.4.0" && \
     export WALTER_VER="1.3.0" && \
